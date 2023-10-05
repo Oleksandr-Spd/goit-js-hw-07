@@ -14,14 +14,9 @@ const markup = galleryItems.map(({ preview, original, description }) => {
 });
 
 galleryCards.insertAdjacentHTML("beforeend", markup.join(""));
-galleryCards.addEventListener("click", onClick);
 
-function onClick(event) {
-  event.preventDefault();
-  var lightbox = new SimpleLightbox(".gallery a", {
-    caption: true,
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-  console.log("lightbox");
-}
+var lightbox = new SimpleLightbox(".gallery a", {
+  caption: true,
+  captionsData: "alt",
+  captionDelay: 250,
+});
